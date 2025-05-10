@@ -66,14 +66,14 @@ public class Student {
 
     @Override
     public String toString() {
-        return "{" +
+        return "Student{" +
                 "id=" + id +
                 ", registration=" + registration +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", birthdate=" + birthdate +
                 ", course='" + course + '\'' +
-                ", cpf='" + cpf + '\'' + '\n' +
-                '}';
+                ", cpf='" + cpf + '\'' +
+                '}' + '\n';
     }
 }
