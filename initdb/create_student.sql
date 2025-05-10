@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS student (
+    id SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    registration INT UNIQUE NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(25),
+    birthdate DATE NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    cpf VARCHAR(15) NOT NULL
+);
