@@ -64,5 +64,16 @@ public class Student {
     public String getCpf() { return cpf; }
     public void setCpf(String cpf) { this.cpf = cpf; }
 
-
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", registration=" + registration +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", birthdate=" + birthdate +
+                ", course='" + course + '\'' +
+                ", cpf='" + cpf + '\'' + '\n' +
+                '}';
+    }
 }

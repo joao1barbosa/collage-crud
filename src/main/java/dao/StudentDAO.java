@@ -45,7 +45,7 @@ public class StudentDAO {
                 student.setName(rs.getString("name"));
                 student.setPhone(rs.getString("phone"));
                 student.setBirthdate(rs.getDate("birthdate"));
-                student.setCourse(rs.getString("curso"));
+                student.setCourse(rs.getString("course"));
                 student.setCpf(rs.getString("cpf"));
                 students.add(student);
             }

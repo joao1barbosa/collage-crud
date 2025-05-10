@@ -1,0 +1,9 @@
+/home/joao/Projects/collage-crud/src/main/java/model/Student.java
+/home/joao/Projects/collage-crud/src/main/java/database/ConnectionFactory.java
+/home/joao/Projects/collage-crud/src/main/java/util/CoursesProvider.java
+/home/joao/Projects/collage-crud/src/main/java/service/StudentService.java
+/home/joao/Projects/collage-crud/src/main/java/Main.java
+/home/joao/Projects/collage-crud/src/main/java/MainSeeder.java
+/home/joao/Projects/collage-crud/src/main/java/dao/StudentDAO.java
+/home/joao/Projects/collage-crud/src/main/java/database/seeder/StudentSeeder.java
+/home/joao/Projects/collage-crud/src/main/java/util/RegistrationGenerator.java
