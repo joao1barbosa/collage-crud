@@ -29,7 +29,22 @@ public class Student {
         this.cpf = cpf;
     }
 
+    public Student(
+            String name,
+            String phone,
+            Date birthdate,
+            String course,
+            String cpf
+    ){
+        this.name = name;
+        this.phone = phone;
+        this.birthdate = birthdate;
+        this.course = course;
+        this.cpf = cpf;
+    }
+
     public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
     public int getRegistration() { return registration; }
     public void setRegistration(int registration) { this.registration = registration; }
@@ -48,4 +63,6 @@ public class Student {
 
     public String getCpf() { return cpf; }
     public void setCpf(String cpf) { this.cpf = cpf; }
+
+
 }
