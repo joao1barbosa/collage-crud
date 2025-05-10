@@ -13,7 +13,7 @@ public class ConnectionFactory {
         try {
             return DriverManager.getConnection(URL, USER, PASSWORD);
         }catch (SQLException e){
-            throw new RuntimeException("Erro na conexão com o banco");
+            throw new RuntimeException("Erro na conexão com o banco" + e.getMessage());
         }
     }
 }
