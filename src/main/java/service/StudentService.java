@@ -16,41 +16,64 @@ public class StudentService {
         this.studentDAO = new StudentDAO();
     }
 
-    public void createStudent(Student student) {
+    public void createStudent(Student student, User user) {
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
+        }
         student.setRegistration(RegistrationGenerator.createRegistration());
         studentDAO.create(student);
     }
 
     public List<Student> getAllStudents(User user) {
-        if (user == null) {
-            throw new IllegalArgumentException("Usuário não pode ser nulo");
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
         }
 
+        return studentDAO.findAll();
+    }
+
+    //TODO: Use DTO to control response
+    public Student getStudentByRegistration(int registration, User user) {
         if(user.isAdmin()){
-            return studentDAO.findAll();
+            return studentDAO.findByRegistration(registration);
         }
 
         Student student = studentDAO.findByRegistration(user.getStudentRegistration());
-        return student != null ? Collections.singletonList(student) : Collections.emptyList();
+        if (student == null) {
+            throw new RuntimeException("Usuário não encontrado");
+        }
 
+        student.setCpf("");
+        student.setId(0);
+
+        return student;
     }
 
-    public Student getStudentByRegistration(int registration) {
-        return studentDAO.findByRegistration(registration);
-    }
+    public Student getStudentByName(String name, User user) {
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
+        }
 
-    public Student getStudentByName(String name) {
         return studentDAO.findByName(name);
     }
 
-    public void updateStudent(Student student) {
+    public void updateStudent(Student student, User user) {
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
+        }
+
         if (student.getRegistration() <= 0) {
             throw new IllegalArgumentException("Matrícula inválida para atualização");
         }
+
         studentDAO.update(student);
     }
 
-    public void deleteStudent(int registration) {
+    public void deleteStudent(int registration, User user) {
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
+        }
+
         if (registration <= 0) {
             throw new IllegalArgumentException("Matrícula inválida para remoção");
         }
