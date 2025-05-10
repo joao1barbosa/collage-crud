@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99012f55-a947-4b11-ada8-57cf532f890b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/initdb/02_create_user.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainSeeder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/seeder/StudentSeeder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/CoursesProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/02_seed_students.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/03_create_user_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initdb/04_insert_dafult_users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initdb/create_student.sql" beforeDir="false" afterPath="$PROJECT_DIR$/initdb/01_create_student.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/StudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb/01_create_student.sql" beforeDir="false" afterPath="$PROJECT_DIR$/initdb/01_create_student_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb/02_create_user.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
