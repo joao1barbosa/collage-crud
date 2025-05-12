@@ -1,6 +1,7 @@
 package service;
 
 import dao.StudentDAO;
+import dto.StudentPublicDTO;
 import model.Student;
 import model.User;
 import util.RegistrationGenerator;
@@ -32,19 +33,20 @@ public class StudentService {
         return studentDAO.findAll();
     }
 
-    //TODO: Use DTO to control response
     public Student getStudentByRegistration(int registration, User user) {
-        if(user.isAdmin()){
-            return studentDAO.findByRegistration(registration);
+        if(!user.isAdmin()){
+            throw new SecurityException("Acesso negado");
         }
 
-        Student student = studentDAO.findByRegistration(user.getStudentRegistration());
-        if (student == null) {
-            throw new RuntimeException("Usuário não encontrado");
-        }
+        Student student = studentDAO.findByRegistration(registration);
+        if (student == null) throw new RuntimeException("Usuário não encontrado");
 
-        student.setCpf("");
-        student.setId(0);
+        return student;
+    }
+
+    public StudentPublicDTO getOwnData(User user){
+        StudentPublicDTO student = studentDAO.findOwnDataByRegistration(user.getStudentRegistration());
+        if (student == null) throw new RuntimeException("Usuário não encontrado");
 
         return student;
     }

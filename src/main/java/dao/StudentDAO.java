@@ -1,5 +1,6 @@
 package dao;
 
+import dto.StudentPublicDTO;
 import model.Student;
 import database.ConnectionFactory;
 
@@ -55,6 +56,32 @@ public class StudentDAO {
         }
 
         return students;
+    }
+
+    public StudentPublicDTO findOwnDataByRegistration(int registration){
+        String sql = "SELECT * FROM student WHERE registration = ?";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, registration);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    StudentPublicDTO student = new StudentPublicDTO();
+                    student.setRegistration(rs.getInt("registration"));
+                    student.setName(rs.getString("name"));
+                    student.setPhone(rs.getString("phone"));
+                    student.setBirthdate(rs.getDate("birthdate"));
+                    student.setCourse(rs.getString("course"));
+                    return student;
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar dados do aluno: " + e.getMessage());
+        }
+
+        return null;
     }
 
     public Student findByRegistration(int registration) {
