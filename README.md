@@ -1,4 +1,4 @@
- Collage CRUD
+# Collage CRUD
 
 Este projeto é uma aplicação simples de cadastro e controle de estudantes e usuários, com autenticação e controle de acesso baseado em cargos. Utiliza Java com Maven, PostgreSQL como banco de dados e integração via Docker para facilitar o setup do ambiente.
 
