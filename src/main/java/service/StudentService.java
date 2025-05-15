@@ -6,8 +6,6 @@ import model.Student;
 import model.User;
 import util.RegistrationGenerator;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class StudentService {

@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99012f55-a947-4b11-ada8-57cf532f890b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/StudentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb/04_seed_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/initdb/04_seed_users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Screens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/StudentPublicDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/StudentPublicDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StudentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

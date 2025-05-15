@@ -26,4 +26,14 @@ public class StudentPublicDTO {
     public String getCourse() { return course; }
     public void setCourse(String course) { this.course = course; }
 
+    @Override
+    public String toString() {
+        return
+                "Matricula: " + registration +
+                "\nNome: " + name +
+                "\nTelefone: " + phone +
+                "\nData de Nascimento: " + birthdate +
+                "\nCurso: " + course +
+                '\n';
+    }
 }

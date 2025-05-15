@@ -2,6 +2,8 @@ import model.User;
 import service.AuthService;
 import service.StudentService;
 import dao.UserDAO;
+import view.StudentView;
+
 import java.util.Scanner;
 
 public class Screens {
@@ -30,12 +32,13 @@ public class Screens {
     private static void adminMenu(User admin) {
         while (true) {
             System.out.println("\n=== MENU ADMIN ===");
-            System.out.println("1. Listar todos alunos");
-            System.out.println("2. Buscar aluno por matrícula");
-            System.out.println("3. Cadastrar novo aluno");
-            System.out.println("4. Atualizar aluno");
-            System.out.println("5. Remover aluno");
-            System.out.println("6. Voltar");
+            System.out.println("1. Cadastrar novo aluno");
+            System.out.println("2. Listar todos alunos");
+            System.out.println("3. Buscar aluno por matrícula");
+            System.out.println("4. Buscar aluno por nome");
+            System.out.println("5. Editar aluno");
+            System.out.println("6. Remover aluno");
+            System.out.println("7. Voltar");
             System.out.print("Escolha: ");
 
             int choice = scanner.nextInt();
@@ -43,21 +46,24 @@ public class Screens {
 
             switch (choice) {
                 case 1:
-                    studentService.getAllStudents(admin);
+                    StudentView.createStudent(admin);
                     break;
                 case 2:
-                    searchStudentByRegistration(admin);
+                    StudentView.listAllStudents(admin);
                     break;
                 case 3:
-                    createStudent(admin);
+                    StudentView.findByRegistration(admin);
                     break;
                 case 4:
-                    updateStudent(admin);
+                    StudentView.findByName(admin);
                     break;
                 case 5:
-                    deleteStudent(admin);
+                    StudentView.updateStudent(admin);
                     break;
                 case 6:
+                    StudentView.deleteStudent(admin);
+                    break;
+                case 7:
                     return;
                 default:
                     System.out.println("Opção inválida!");
@@ -77,7 +83,7 @@ public class Screens {
 
             switch (choice) {
                 case 1:
-                    viewMyStudent(user);
+                    StudentView.viewOwnData(user);
                     break;
                 case 2:
                     return;

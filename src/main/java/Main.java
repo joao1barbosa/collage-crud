@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        private static Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("\n=== COLLAGE CRUD ===");
@@ -15,7 +15,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    loginScreen();
+                    Screens.login();
                     break;
                 case 2:
                     System.exit(0);
