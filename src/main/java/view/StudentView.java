@@ -18,7 +18,7 @@ public class StudentView {
     public static void createStudent(User user){
         Student student = new Student();
 
-        System.out.println("\n=== Buscar aluno ===");
+        System.out.println("\n=== Cadastrar aluno ===");
         System.out.println("-------------------------------------------------");
 
         System.out.print("Nome: ");
