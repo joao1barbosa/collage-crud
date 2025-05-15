@@ -21,22 +21,22 @@ public class StudentView {
         System.out.println("\n=== Buscar aluno ===");
         System.out.println("-------------------------------------------------");
 
-        System.out.println("Nome: ");
+        System.out.print("Nome: ");
         student.setName(scanner.nextLine());
 
-        System.out.println("Telefone: ");
+        System.out.print("Telefone: ");
         student.setPhone(scanner.nextLine());
 
-        System.out.println("Aniversário: ");
+        System.out.print("Aniversário: ");
         String date = scanner.nextLine();
         student.setBirthdate(Date.valueOf(
                 LocalDate.parse(date,formatter)
         ));
 
-        System.out.println("Curso: ");
+        System.out.print("Curso: ");
         student.setCourse(scanner.nextLine());
 
-        System.out.println("CPF: ");
+        System.out.print("CPF: ");
         student.setCpf(scanner.nextLine());
 
         System.out.println("-------------------------------------------------");
