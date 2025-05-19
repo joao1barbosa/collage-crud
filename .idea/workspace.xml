@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99012f55-a947-4b11-ada8-57cf532f890b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/initdb/05_create_class_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initdb/06_seed_classes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initdb/07_create_user_class_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initdb/08_seed_user_class.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CollageClassDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/CollageClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb/06_seed_classes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/initdb/06_seed_classes.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,4 +1,4 @@
-INSERT INTO class (class_name, shift, course)
+INSERT INTO class (name, shift, course)
 VALUES
     ('ES - Turma 01', 'Matutino', 'Engenharia de Software'),
     ('DIR - Turma 02', 'Noturno', 'Direito'),
