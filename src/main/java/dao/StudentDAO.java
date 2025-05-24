@@ -140,6 +140,24 @@ public class StudentDAO {
         return null;
     }
 
+    public int findIdByRegistration(int registration){
+        String sql = "SELECT id FROM student WHERE registration = ?";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, registration);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) return rs.getInt("id");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar ID do aluno pela matrícula: " + e.getMessage());
+        }
+
+        return -1;
+    }
+
     public void update(Student student) {
         String sql = "UPDATE student SET name = ?, phone = ?, birthdate = ?, course = ?, cpf = ? WHERE registration = ?";
 
