@@ -18,14 +18,16 @@ public class CollageClassDAO {
             stmt.setString(2, collageClass.getShift());
             stmt.setString(3, collageClass.getCourse());
 
+            stmt.executeUpdate();
+
         } catch (SQLException e){
-            throw  new RuntimeException("Erro ao inserir turma: " + e.getMessage());
+            throw new RuntimeException("Erro ao inserir turma: " + e.getMessage());
         }
     }
 
     public List<CollageClass> findAll() {
         List<CollageClass> collageClasses = new ArrayList<>();
-        String sql = "SELECT * FROM student";
+        String sql = "SELECT * FROM class";
 
         try (Connection conn = ConnectionFactory.getConnection();
              Statement stmt = conn.createStatement();
