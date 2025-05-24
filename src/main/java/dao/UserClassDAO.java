@@ -10,7 +10,7 @@ import database.ConnectionFactory;
 
 public class UserClassDAO {
 
-    public void create(int userId, int classId) {
+    public void addUserToClass(int userId, int classId) {
         String sql = "INSERT INTO user_class (user_id, class_id) VALUES (?, ?)";
 
         try (Connection conn = ConnectionFactory.getConnection();
@@ -87,7 +87,7 @@ public class UserClassDAO {
         return students;
     }
 
-    public void delete(int userId, int classId) {
+    public void deleteUserFromClass(int userId, int classId) {
         String sql = "DELETE FROM user_class WHERE user_id = ? AND class_id = ?";
 
         try (Connection conn = ConnectionFactory.getConnection();
