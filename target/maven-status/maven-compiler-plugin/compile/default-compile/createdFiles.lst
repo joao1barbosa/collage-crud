@@ -1,9 +1,0 @@
-MainSeeder.class
-database/ConnectionFactory.class
-Main.class
-database/seeder/StudentSeeder.class
-util/CoursesProvider.class
-dao/StudentDAO.class
-util/RegistrationGenerator.class
-model/Student.class
-service/StudentService.class

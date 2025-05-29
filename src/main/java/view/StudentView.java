@@ -1,3 +1,4 @@
+//TODO: change switch to hash tables
 package view;
 
 import dto.StudentPublicDTO;
